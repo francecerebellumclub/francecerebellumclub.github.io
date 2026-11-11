@@ -1,0 +1,26 @@
+{{ partial "header.html" . }}
+{{ partial "navbar.html" . }}
+
+<!-- "All news" page: every post, grouped by year, newest first. -->
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h1>News</h1>
+            {{ range .Pages.GroupByDate "2006" }}
+            <div class="row" id="pub_list">
+                <div class="col-md-2">
+                    <h3>{{ .Key }}</h3>
+                </div>
+                <div class="col-md-10">
+                    {{ range .Pages.ByDate.Reverse }}
+                        {{ partial "index/single_post" . }}
+                    {{ end }}
+                </div>
+            </div>
+            {{ end }}
+        </div>
+    </div>
+</div>
+
+{{ partial "footer_container.html" . }}
+{{ partial "footer.html" . }}

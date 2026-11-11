@@ -1,0 +1,17 @@
+{{ with .Site.Params.mailing_list }}
+<section id="mailing-list" class="home-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-md-4 section-heading">
+                <h1>{{ .title | markdownify }}</h1>
+            </div>
+            <div class="col-xs-12 col-md-8">
+                <div class="article-style">
+                    {{ with .intro }}<p>{{ . | markdownify }}</p>{{ end }}
+                    {{ with .text }}{{ . | markdownify }}{{ end }}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{{ end }}

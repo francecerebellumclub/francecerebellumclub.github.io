@@ -1,0 +1,30 @@
+{{- /* One news item (home page "Latest News" and the "All news" page).
+       If the front matter has `link` (a web address, or a page of this site such as "/meetings/"),
+       the title and button go there; otherwise they go to the news item's own page.
+       If it has `image` (in static/img/), the image is shown as a thumbnail on the left. */ -}}
+{{ $url := .Permalink }}
+{{ $external := false }}
+{{ with .Params.link }}
+    {{ if hasPrefix . "http" }}{{ $url = . }}{{ $external = true }}{{ else }}{{ $url = relURL (strings.TrimPrefix "/" .) }}{{ end }}
+{{ end }}
+<div class="row article-list-item news-item" itemscope itemprop="blogPost">
+    {{ with .Params.image }}
+    <div class="col-xs-5 col-sm-4">
+        <a href="{{ $url }}">
+            <div class="project-picture news-picture" itemprop="image" style="background-image: url('{{ printf "img/%s" . | relURL }}')"></div>
+        </a>
+    </div>
+    {{ end }}
+    <div class="{{ if .Params.image }}col-xs-7 col-sm-8{{ else }}col-xs-12{{ end }}">
+        <h3 class="article-title" itemprop="name"><a href="{{ $url }}">{{ .Title }}</a></h3>
+        <p class="article-date">Published {{ .Date.Format "January 2, 2006" }}</p>
+        <p class="article-style" itemprop="articleBody">
+            {{ with .Params.short_text }}{{ . | markdownify }}{{ else }}{{ .Summary }}{{ end }}
+        </p>
+        <p class="read-more">
+            <a href="{{ $url }}" class="btn btn-primary btn-outline">
+                {{ if $external }}<i class="fa fa-external-link" aria-hidden="true"></i> {{ with .Params.link_text }}{{ . }}{{ else }}Visit website{{ end }}{{ else }}{{ with .Params.link_text }}{{ . }}{{ else }}{{ $.Site.Params.posts.str_read_more }}{{ end }}{{ end }}
+            </a>
+        </p>
+    </div>
+</div>

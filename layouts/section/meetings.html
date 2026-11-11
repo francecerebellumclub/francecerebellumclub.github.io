@@ -1,0 +1,42 @@
+{{ partial "header.html" . }}
+{{ partial "navbar.html" . }}
+
+<!-- Annual Meetings page: upcoming meetings (soonest first), then past meetings (newest first).
+     A meeting counts as upcoming until its last day (`end_date`, or `date` if there is none). -->
+{{ $upcoming := slice }}
+{{ $past := slice }}
+{{ range .Pages.ByDate }}
+    {{ $last := .Date }}
+    {{ with .Params.end_date }}{{ $last = time . }}{{ end }}
+    {{ if ge ($last.AddDate 0 0 1) now }}
+        {{ $upcoming = $upcoming | append . }}
+    {{ else }}
+        {{ $past = $past | append . }}
+    {{ end }}
+{{ end }}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h1>{{ .Title }}</h1>
+            {{ with .Content }}<div class="article-style">{{ . }}</div>{{ end }}
+
+            <h2 id="upcoming">Upcoming Meetings</h2>
+            {{ range $upcoming }}
+                {{ partial "meeting_li.html" . }}
+            {{ else }}
+                <p>The next meeting will be announced soon.</p>
+            {{ end }}
+
+            {{ if $past }}
+            <h2 id="past">Past Meetings</h2>
+            {{ range $past.Reverse }}
+                {{ partial "meeting_li.html" . }}
+            {{ end }}
+            {{ end }}
+        </div>
+    </div>
+</div>
+
+{{ partial "footer_container.html" . }}
+{{ partial "footer.html" . }}

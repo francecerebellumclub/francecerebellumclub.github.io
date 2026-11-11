@@ -1,0 +1,24 @@
+{{ partial "header.html" . }}
+{{ partial "navbar.html" . }}
+
+<div class="container">
+    <article class="article" itemscope itemtype="http://schema.org/Article">
+        {{ if .Params.image }}
+            <img src="{{ printf "img/%s" .Params.image | relURL }}" class="article-banner" itemprop="image" alt="">
+        {{ end }}
+
+        <h1 itemprop="name">{{ .Title }}</h1>
+        <p class="article-date">Published {{ .Date.Format "January 2, 2006" }}</p>
+
+        <div class="article-style" itemprop="articleBody">
+            {{ .Content }}
+        </div>
+    </article>
+
+    <p class="view-all">
+        <a href="{{ "post/" | relURL }}"><i class="fa fa-angle-double-left"></i> All news</a>
+    </p>
+</div>
+
+{{ partial "footer_container.html" . }}
+{{ partial "footer.html" . }}

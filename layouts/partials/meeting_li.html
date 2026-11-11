@@ -1,0 +1,38 @@
+{{- /* One meeting in the Annual Meetings list. All information comes from the meeting's
+       front matter: title, date/end_date, location, short_description, keynotes,
+       program (PDF in static/ or a web address), external_link (meeting website), picture. */ -}}
+{{ $website := .Params.external_link }}
+{{ $program := "" }}
+{{ with .Params.program }}{{ if hasPrefix . "http" }}{{ $program = . }}{{ else }}{{ $program = relURL . }}{{ end }}{{ end }}
+<div class="row meeting-item">
+    <div class="col-xs-4 col-md-2">
+        {{ if $website }}<a href="{{ $website }}">{{ end }}
+            {{ if .Params.picture }}
+                <div class="project-picture" style="background-image: url('{{ printf "img/%s" .Params.picture | relURL }}')"></div>
+            {{ else }}
+                {{- /* No picture given: show the club logo */ -}}
+                <div class="project-picture" style="background-image: url('{{ "img/logo.png" | relURL }}')"></div>
+            {{ end }}
+        {{ if $website }}</a>{{ end }}
+    </div>
+    <div class="col-xs-8 col-md-10">
+        <h3 class="article-title">{{ if $website }}<a href="{{ $website }}">{{ .Title }}</a>{{ else }}{{ .Title }}{{ end }}</h3>
+        <p class="meeting-when">
+            <i class="fa fa-calendar fa-fw" aria-hidden="true"></i> {{ partial "meeting_dates.html" . }}
+            {{ with .Params.location }}<br><i class="fa fa-map-marker fa-fw" aria-hidden="true"></i> {{ . | markdownify }}{{ end }}
+        </p>
+        {{ with .Params.short_description }}<p class="article-style">{{ . | markdownify }}</p>{{ end }}
+        {{ with .Params.keynotes }}
+            <p class="meeting-keynotes">
+                <strong>Keynote {{ if gt (len .) 1 }}speakers{{ else }}speaker{{ end }}:</strong>
+                {{ delimit . ", " }}
+            </p>
+        {{ end }}
+        {{ if or $program $website }}
+        <p class="meeting-links">
+            {{ with $program }}<a href="{{ . }}" class="btn btn-primary btn-outline"><i class="fa fa-file-text-o" aria-hidden="true"></i> Programme</a>{{ end }}
+            {{ with $website }}<a href="{{ . }}" class="btn btn-primary btn-outline"><i class="fa fa-external-link" aria-hidden="true"></i> Meeting website</a>{{ end }}
+        </p>
+        {{ end }}
+    </div>
+</div>

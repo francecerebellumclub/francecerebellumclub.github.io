@@ -1,0 +1,19 @@
+{{ with .Site.Params.mission }}
+<section id="mission" class="home-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-md-4 section-heading">
+                <h1>{{ .title | markdownify }}</h1>
+            </div>
+            <div class="col-xs-12 col-md-8">
+                <div class="article-style">{{ .text | markdownify }}</div>
+                {{ with .link }}
+                <p class="read-more">
+                    <a href="{{ . }}" class="btn btn-primary btn-outline">{{ $.Site.Params.mission.link_text }}</a>
+                </p>
+                {{ end }}
+            </div>
+        </div>
+    </div>
+</section>
+{{ end }}

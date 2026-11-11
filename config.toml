@@ -1,0 +1,76 @@
+baseurl = "https://francecerebellumclub.github.io/"
+canonifyurls = true
+theme = "hugo-academic-group"
+languageCode = "en-us"
+title = "France Cerebellum Club"
+copyright = "&copy; France Cerebellum Club, 2026"
+math = false
+buildFuture = true   # show upcoming meetings (dated in the future)
+
+# No tags/categories pages are needed.
+disableKinds = ["taxonomy", "term"]
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true   # allow raw HTML inside Markdown content
+
+[params]
+  description = "Website of the France Cerebellum Club"
+  author = "France Cerebellum Club"
+  custom_css = ["fcc.css"]
+  # Google Analytics: uncomment and set your measurement ID to enable it.
+  # gtm_id = "G-XXXXXXXXXX"
+
+  # Big banner at the top of the home page (background image: static/img/banner-cerebellum.jpg).
+  slogan = "France Cerebellum Club"
+
+  # Navigation bar (top left): logo (static/img/logo.png) followed by the club name.
+  [[params.navbar_hierarchy]]
+    name = "France Cerebellum Club"
+    link = "/"
+    position = 1
+
+  [params.logo]
+    image = "img/logo.png"
+    link = "/"
+
+  # Home page: short mission synopsis.
+  [params.mission]
+    title = "Our Mission"
+    text = "The France Cerebellum Club is a scientific organization whose goal is to promote interactions and collaboration between scientists sharing a common interest in the study of the cerebellum. This is mainly achieved through the organization of a yearly meeting - the *Cerebellum Days*. "
+    link = "/about/"
+    link_text = "More about the club"
+
+  # Home page: latest news (taken from content/post/, newest first).
+  [params.posts]
+    title = "Latest News"
+    count = 3
+    str_all = "All news"
+    str_read_more = "Read more"
+
+  # Home page: mailing list (below the news). The "text" allows Markdown.
+  [params.mailing_list]
+    title = "Mailing List"
+    intro = "Stay informed about Club announcements, events and position postings by subscribing to our mailing list."
+    text = """
+- **Subscribe** to the list ➙ [framalistes.org/sympa/subscribe/francecerebellumclub](https://framalistes.org/sympa/subscribe/francecerebellumclub)
+- **Unsubscribe** from the list ➙ [framalistes.org/sympa/sigrequest/francecerebellumclub](https://framalistes.org/sympa/sigrequest/francecerebellumclub)
+- **Write** to the list ➙ [francecerebellumclub@framalistes.org](mailto:francecerebellumclub@framalistes.org)
+"""
+
+# Navigation bar (the weight sets the order).
+[[menu.main]]
+  name = "Home"
+  url = "/"
+  weight = 1
+
+[[menu.main]]
+  name = "Annual Meetings"
+  url = "/meetings/"
+  weight = 2
+
+[[menu.main]]
+  name = "About the Club"
+  url = "/about/"
+  weight = 3

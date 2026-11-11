@@ -1,0 +1,8 @@
+    <!-- Google tag (gtag.js), only included when params.gtm_id is set in config.toml -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id={{ .Site.Params.gtm_id }}"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', '{{ .Site.Params.gtm_id }}');
+    </script>

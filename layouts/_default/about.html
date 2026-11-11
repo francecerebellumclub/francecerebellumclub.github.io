@@ -1,0 +1,69 @@
+{{ partial "header.html" . }}
+{{ partial "navbar.html" . }}
+
+<!-- About the Club: page text (content/about.md), then the Board section
+     ([[board]] and [[formerBoard]]) and the International Networks section ([[network]]),
+     all taken from the front matter of content/about.md. -->
+<div class="container">
+    <article class="article">
+        <h1>{{ .Title }}</h1>
+        <div class="article-style">
+            {{ .Content }}
+        </div>
+
+        <!-- Board section: current board (cards) + former board members (small list) -->
+        {{ if or .Params.board .Params.formerBoard }}
+        <section class="about-section" id="board">
+            <h2>{{ with .Params.board_title }}{{ . }}{{ else }}The Board{{ end }}</h2>
+            {{ with .Params.board }}
+            <div class="row board">
+                {{ range . }}
+                <div class="col-xs-12 col-md-6 board-member">
+                    {{ if .photo }}
+                        <div class="portrait" style="background-image: url('{{ printf "img/board/%s" .photo | relURL }}');"></div>
+                    {{ else }}
+                        <div class="portrait"></div>
+                    {{ end }}
+                    <div class="board-text">
+                        <h3>{{ if .link }}<a href="{{ .link }}">{{ .name }}</a>{{ else }}{{ .name }}{{ end }}</h3>
+                        {{ with .role }}<p class="board-role">{{ . }}</p>{{ end }}
+                        {{- /* Each line break in the affiliation (written between """ ... """) becomes a visible line break. */ -}}
+                        {{ with .affiliation }}<p class="board-affiliation">{{ replace (trim . "\n ") "\n" "  \n" | markdownify }}</p>{{ end }}
+                        {{ with .email }}<p class="board-email"><i class="fa fa-envelope fa-fw" aria-hidden="true"></i> <a href="mailto:{{ . }}">{{ . }}</a></p>{{ end }}
+                    </div>
+                </div>
+                {{ end }}
+            </div>
+            {{ end }}
+
+            {{ with .Params.formerBoard }}
+            <h3 class="former-board-title" id="former-board">Former Board Members</h3>
+            <ul class="former-board">
+                {{ range . }}
+                <li><strong>{{ .name }}</strong>{{ with .function }}, {{ . }}{{ end }}{{ with .duration }} ({{ . }}){{ end }}</li>
+                {{ end }}
+            </ul>
+            {{ end }}
+        </section>
+        {{ end }}
+
+        <!-- International networks section -->
+        {{ with .Params.network }}
+        <section class="about-section" id="networks">
+            <h2>{{ with $.Params.networks_title }}{{ . }}{{ else }}Our International Networks{{ end }}</h2>
+            {{ with $.Params.networks_intro }}<div class="article-style"><p>{{ . | markdownify }}</p></div>{{ end }}
+            <div class="networks">
+                {{ range . }}
+                <div class="network-item">
+                    <h3>{{ if .link }}<a href="{{ .link }}">{{ .name }}</a>{{ else }}{{ .name }}{{ end }}</h3>
+                    {{ with .description }}<p>{{ . | markdownify }}</p>{{ end }}
+                </div>
+                {{ end }}
+            </div>
+        </section>
+        {{ end }}
+    </article>
+</div>
+
+{{ partial "footer_container.html" . }}
+{{ partial "footer.html" . }}
