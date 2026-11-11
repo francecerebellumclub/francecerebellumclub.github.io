@@ -54,8 +54,8 @@ disableKinds = ["taxonomy", "term"]
     title = "Mailing List"
     intro = "Stay informed about Club announcements, events and position postings by subscribing to our mailing list."
     text = """
-- **Subscribe** to the list ➙ [framalistes.org/sympa/subscribe/francecerebellumclub](https://framalistes.org/sympa/subscribe/francecerebellumclub)
-- **Unsubscribe** from the list ➙ [framalistes.org/sympa/sigrequest/francecerebellumclub](https://framalistes.org/sympa/sigrequest/francecerebellumclub)
+- **[Subscribe](https://framalistes.org/sympa/subscribe/francecerebellumclub)** to the list
+- **[Unsubscribe](https://framalistes.org/sympa/sigrequest/francecerebellumclub)** from the list
 - **Write** to the list ➙ [francecerebellumclub@framalistes.org](mailto:francecerebellumclub@framalistes.org)
 """
 
