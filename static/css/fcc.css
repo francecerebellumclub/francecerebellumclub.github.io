@@ -1154,3 +1154,14 @@ header h1 {
 .news-item {
     margin-bottom: 20px;
 }
+
+/* Meeting thumbnails: at most 150 px, but shrinking with their column on phones
+   (a fixed 150 px made them overlap the text on narrow screens) */
+.meeting-item .project-picture {
+    width: 100%;
+    max-width: 150px;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    margin: 20px 0 10px 0;
+    background-position: center;
+}
