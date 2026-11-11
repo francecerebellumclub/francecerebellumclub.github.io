@@ -20,7 +20,7 @@ networks_intro = "The France Cerebellum Club is committed to fostering an inclus
 board_title = "The Board"
 
 [[board]]
-  name = "Dr. Fekrije Selimi"
+  name = "Fekrije Selimi"
   role = "President"
   affiliation = """CIRB-Collège de France
   CNRS UMR7241 – INSERM U1050
@@ -31,7 +31,7 @@ board_title = "The Board"
   link = "http://www.fekrijeselimilab.com/"
 
 [[board]]
-  name = "Dr. Fabrice Ango"
+  name = "Fabrice Ango"
   role = "Vice-President"
   affiliation = """Institute for Neuroscience Montpellier
 Hôpital Saint Eloi – Bâtiment INM
@@ -43,7 +43,7 @@ Hôpital Saint Eloi – Bâtiment INM
   link = "http://www.inmfrance.com/inmfrance-j3/index.php/en/sensation"
 
 [[board]]
-  name = "Dr. Michael Graupner"
+  name = "Michael Graupner"
   role = "Treasurer"
   affiliation = """
 Saints-Pères Paris Institute for the Neurosciences
@@ -56,7 +56,7 @@ CNRS UMR 8003, Université Paris Cité
   link = "https://www.biomedicale.parisdescartes.fr/~mgraupe/"
 
 [[board]]
-  name = "Dr. Christelle Rochefort"
+  name = "Christelle Rochefort"
   role = "Secretary"
   affiliation = """
 Cerebellum, Navigation & Memory Team
