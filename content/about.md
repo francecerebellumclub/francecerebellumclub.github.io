@@ -81,6 +81,11 @@ Sorbonne Université, CNRS UMR 8265, INSERM U1341
   function = "Secretary"
   duration = "2017–2019"
 
+[[formerBoard]]
+  name = "Philippe Isope"
+  function = "Treasurer"
+  duration = "2017–2025"
+
 # International networks: one [[network]] block per organization.
 [[network]]
   name = "ALBA Network"
