@@ -56,7 +56,7 @@ CNRS UMR 8003, Université Paris Cité
   link = "https://www.biomedicale.parisdescartes.fr/~mgraupe/"
 
 [[board]]
-  name = "Pr. Christelle Rochefort"
+  name = "Dr. Christelle Rochefort"
   role = "Secretary"
   affiliation = """
 Cerebellum, Navigation & Memory Team
