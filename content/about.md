@@ -40,7 +40,7 @@ Hôpital Saint Eloi – Bâtiment INM
 """
   photo = "ango.jpg"
   email = "fabrice.ango@inserm.fr"
-  link = "http://www.inmfrance.com/inmfrance-j3/index.php/en/sensation"
+  link = "https://esploro.umontpellier.fr/esploro/profile/fabrice_ango/overview"
 
 [[board]]
   name = "Michael Graupner"
@@ -67,7 +67,7 @@ Sorbonne Université, CNRS UMR 8265, INSERM U1341
 """
   photo = "rochefort.jpg"
   email = "christelle.rochefort@sorbonne-universite.fr"
-  link = "https://www.ibps.sorbonne-universite.fr/fr/Recherche/centre-de-neuroscience-sorbonne-universite-neurosu/cervelet-navigation-et-memoire"
+  link = "https://www.ibps.sorbonne-universite.fr/fr/IBPS/annuaire/1203-Christelle-Rochefort"
 
 # Former board members: one [[formerBoard]] block per person and function,
 # listed under "Former Board Members" (most recent first, in the order written here).
