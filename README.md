@@ -50,10 +50,12 @@ until you remove that line; `make preview-drafts` shows them locally. The same l
 any existing news item or meeting. Then publish:
 
 ```
-git add -A
-git commit -m "Describe your change"
-git push
+make publish MSG="Describe your change"
 ```
+
+This checks that the site builds (nothing is published if it doesn't), fetches changes made
+on GitHub in the meantime, then commits and pushes everything. It is the same as
+`git pull --rebase`, `git add -A`, `git commit -m "..."`, `git push`.
 
 ## License
 

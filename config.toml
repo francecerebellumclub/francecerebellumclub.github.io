@@ -38,7 +38,7 @@ disableKinds = ["taxonomy", "term"]
   # Home page: short mission synopsis.
   [params.mission]
     title = "Our Mission"
-    text = "The France Cerebellum Club is a scientific organization whose goal is to promote interactions and collaboration between scientists sharing a common interest in the study of the cerebellum. This is mainly achieved through the organization of a yearly meeting - the *Cerebellum Days*. "
+    text = "The *France Cerebellum Club* is a scientific organization whose goal is to promote interactions and collaboration between scientists sharing a common interest in the study of the cerebellum. This is mainly achieved through the organization of a yearly meeting - the *Cerebellum Day(s)*. "
     link = "/about/"
     link_text = "More about the club"
 

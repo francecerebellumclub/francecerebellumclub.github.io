@@ -8,4 +8,5 @@ keynotes = [
   "Michael Häusser (UCL, London, UK)",
 ]
 program = "docs/meetings/2023-programme.pdf"
+picture = "meetings/2023-6cb-logo.jpg"
 +++
