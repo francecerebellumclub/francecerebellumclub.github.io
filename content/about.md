@@ -69,6 +69,34 @@ Sorbonne Université, CNRS UMR 8265, INSERM U1341
   email = "christelle.rochefort@sorbonne-universite.fr"
   link = "https://www.ibps.sorbonne-universite.fr/fr/IBPS/annuaire/1203-Christelle-Rochefort"
 
+[[board]]
+  name = "Delphine Burel"
+  role = "Associated Board Member"
+  affiliation = """
+Cancer and Brain Genomics, Inserm UMR1245
+UFR Santé
+Bâtiment Recherche 1er étage
+22, boulevard Gambetta
+76000 Rouen
+"""
+  photo = "delphine.jpeg"
+  email = "delphine.burel@univ-rouen.fr"
+  link = "https://cbg.univ-rouen.fr/membre/delphine-burel/"
+
+[[board]]
+  name = "Marion Coolen"
+  role = "Associated Board Member"
+  affiliation = """
+Génétique des Troubles du Neurodéveloppement
+Institut Imagine
+24 Boulevard du Montparnasse
+75015 Paris
+"""
+  photo = "marion.webp"
+  email = "marion.coolen@inserm.fr"
+  link = "https://www.institutimagine.org/fr/users/marioncooleninstitutimagineorg"
+
+
 # Former board members: one [[formerBoard]] block per person and function,
 # listed under "Former Board Members" (most recent first, in the order written here).
 [[formerBoard]]

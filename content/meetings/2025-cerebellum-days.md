@@ -7,5 +7,6 @@ keynotes = [
   "Mari Sepp (Heidelberg University, Germany)",
   "Christian Hansel (University of Chicago, USA)",
 ]
+picture = "meetings/2025-8cb-logo.jpg"
 external_link = "https://eighthcbdays.univ-rouen.fr/"
 +++
