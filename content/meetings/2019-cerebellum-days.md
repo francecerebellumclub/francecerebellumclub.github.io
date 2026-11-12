@@ -3,6 +3,7 @@ title = "2nd Cerebellum Days"
 date = "2019-01-28"
 end_date = "2019-01-29"
 location = "Collège de France, Paris"
+picture = "meetings/2018-2019-cdf-logo.jpg"
 short_description = "Including a session in honor of Masao Ito."
 keynotes = [
   "Hélène Puccio (IGBMC, Strasbourg)",
