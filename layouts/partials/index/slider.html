@@ -24,6 +24,23 @@
     <a class="right carousel-control" href="#" data-target="#slider" role="button" data-slide="next"><i class="fa fa-chevron-right" aria-hidden="true"></i><span class="sr-only">Next</span></a>
     {{ end }}
 </section>
+{{ if and (gt (len $slides) 1) (ne site.Params.slider_shuffle false) }}
+<script>
+// Show the slides in a new random order on every visit (set slider_shuffle = false in config.toml to use the weights instead)
+(function () {
+    var inner = document.querySelector('#slider .carousel-inner');
+    var items = Array.prototype.slice.call(inner.children);
+    for (var i = items.length - 1; i > 0; i--) {
+        var j = Math.floor(Math.random() * (i + 1));
+        var t = items[i]; items[i] = items[j]; items[j] = t;
+    }
+    items.forEach(function (el, k) {
+        el.classList.toggle('active', k === 0);
+        inner.appendChild(el);
+    });
+})();
+</script>
+{{ end }}
 {{ end }}
 
 <section id="club-name" class="club-name">

@@ -24,6 +24,8 @@ disableKinds = ["taxonomy", "term"]
 
   # Club name shown below the image slider on the home page (slider images: content/slider/).
   slogan = "France Cerebellum Club"
+  # Home page slider: random image order on every visit (false = order by `weight`)
+  slider_shuffle = true
 
   # Navigation bar (top left): logo (static/img/logo.png) followed by the club name.
   [[params.navbar_hierarchy]]
