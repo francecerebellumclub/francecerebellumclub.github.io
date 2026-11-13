@@ -12,12 +12,13 @@ The site is also rebuilt every Monday, so finished meetings move to "Past Meetin
 
 | What | File(s) |
 |------|---------|
-| Site title, banner text, **home page mission synopsis**, menu | `config.toml` |
+| Site title, club name under the slider, **home page mission synopsis**, menu | `config.toml` |
+| **Home page image slider** (one file per image: `image`, `source`, `weight`) | `content/slider/*.md`, pictures in `static/img/slider/` |
 | **Latest News** (one file per news item) | `content/post/*.md` |
 | **Annual Meetings** intro text | `content/meetings/_index.md` |
 | **Annual Meetings** (one file per Cerebellum Days) | `content/meetings/*.md` |
 | **About the Club**: mission, board, mailing list | `content/about.md` |
-| Images | `static/img/` (`banner-cerebellum.jpg` = home banner, `board/`, `meetings/`, `news/`) |
+| Images | `static/img/` (`slider/` = home page slider, `board/`, `meetings/`, `news/`) |
 | Page templates / styles | `layouts/`, `static/css/fcc.css` |
 
 Each Markdown file starts with a header between `+++` lines (title, date, ...), followed by the text.
@@ -43,6 +44,7 @@ Useful commands (`make help` lists them all):
 make update                               # get the latest version (site + theme)
 make news NAME=2027-01-10-my-news         # new news item (draft) in content/post/
 make meeting NAME=2028-cerebellum-days    # new meeting (draft) in content/meetings/
+make slide NAME=purkinje-cell             # new slider image (draft) in content/slider/; put the picture in static/img/slider/
 ```
 
 New items are created with `draft = true`: they are hidden (online and in `make preview`)

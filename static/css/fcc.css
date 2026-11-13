@@ -1165,3 +1165,68 @@ header h1 {
     margin: 20px 0 10px 0;
     background-position: center;
 }
+
+/* Home page image slider (content/slider/) and the club name below it */
+.fcc-slider {
+    background: #0f1d19;
+}
+.fcc-slider .slide-img {
+    height: 65vh;
+    min-height: 280px;
+    max-height: 640px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.fcc-slider .slide-img.slide-contain {
+    background-size: contain;
+}
+.fcc-slider .slide-credit {
+    position: absolute;
+    top: auto;
+    left: auto;
+    right: 0;
+    bottom: 0;
+    height: auto;
+    min-height: 0;
+    z-index: 10;
+    margin: 0;
+    padding: 4px 12px;
+    font-size: 13px;
+    line-height: 1.4;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.55);
+    border-top-left-radius: 4px;
+}
+.fcc-slider .slide-credit a {
+    color: #fff;
+    text-decoration: underline;
+}
+.fcc-slider .carousel-control {
+    width: 8%;
+    background-image: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+}
+.fcc-slider .carousel-indicators {
+    bottom: 34px;
+}
+.club-name {
+    text-align: center;
+    padding: 40px 0 10px 0;
+}
+.club-name h1 {
+    margin: 0;
+    font-size: 3em;
+}
+@media (max-width: 767px) {
+    .fcc-slider .slide-img {
+        height: 45vh;
+        min-height: 220px;
+    }
+    .club-name h1 {
+        font-size: 2em;
+    }
+}

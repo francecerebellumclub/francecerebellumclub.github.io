@@ -22,7 +22,7 @@ disableKinds = ["taxonomy", "term"]
   # Google Analytics: uncomment and set your measurement ID to enable it.
   # gtm_id = "G-XXXXXXXXXX"
 
-  # Big banner at the top of the home page (background image: static/img/banner-cerebellum.jpg).
+  # Club name shown below the image slider on the home page (slider images: content/slider/).
   slogan = "France Cerebellum Club"
 
   # Navigation bar (top left): logo (static/img/logo.png) followed by the club name.
