@@ -1,0 +1,82 @@
+{{ partial "header.html" . }}
+{{ partial "navbar.html" . }}
+
+{{- /* Research Teams: intro (content/teams/_index.md), a map of France with one pin per city
+       (positions in data/cities.toml), then the teams grouped by city (content/teams/*.md). */ -}}
+{{ $teams := where site.RegularPages "Section" "teams" }}
+{{ $groups := $teams.GroupByParam "city" }}
+
+<div class="container">
+    <article class="article">
+        <h1>{{ .Title }}</h1>
+        <div class="article-style">{{ .Content }}</div>
+
+        {{- /* Map data: one entry per city that has coordinates */ -}}
+        {{ $pins := slice }}
+        {{ range $groups }}
+            {{ $city := .Key }}
+            {{ $n := len .Pages }}
+            {{ with index site.Data.cities $city }}
+                {{ $pins = $pins | append (dict "city" $city "id" (printf "city-%s" (urlize $city)) "n" $n "lat" .lat "lon" .lon "label" (default "right" .label)) }}
+            {{ end }}
+        {{ end }}
+
+        <div id="teams-map" class="teams-map" role="region" aria-label="Map of the research teams by city"></div>
+
+        {{ range $groups }}
+        <section class="team-city" id="city-{{ urlize .Key }}">
+            <h2><i class="fa fa-map-marker" aria-hidden="true"></i> {{ .Key }} <small>{{ len .Pages }} {{ if gt (len .Pages) 1 }}teams{{ else }}team{{ end }}</small></h2>
+            {{ range .Pages.ByTitle }}
+            {{ $t := . }}
+            <div class="team-item">
+                <h3>{{ with $t.Params.link }}<a href="{{ . }}">{{ $t.Title }}</a>{{ else }}{{ $t.Title }}{{ end }}</h3>
+                {{ with $t.Params.pis }}<p class="team-pis"><i class="fa fa-user fa-fw" aria-hidden="true"></i> {{ delimit . ", " }}</p>{{ end }}
+                <p class="team-lab"><i class="fa fa-university fa-fw" aria-hidden="true"></i> {{ $t.Params.lab }}{{ with $t.Params.institutions }}{{ if $t.Params.lab }}, {{ end }}{{ delimit . ", " }}{{ end }}</p>
+                {{ with .Params.focus }}<p class="team-focus">{{ . | markdownify }}</p>{{ end }}
+            </div>
+            {{ end }}
+        </section>
+        {{ end }}
+
+        {{ with .Params.missing_text }}<p class="teams-missing">{{ . | markdownify }}</p>{{ end }}
+    </article>
+</div>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<script>
+(function () {
+    var pins = {{ $pins | jsonify | safeJS }};
+    var el = document.getElementById('teams-map');
+    if (!window.L || !el || !pins.length) { if (el) el.style.display = 'none'; return; }
+    var map = L.map(el, { scrollWheelZoom: false, zoomSnap: 0.1 });
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 12,
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+    // Always show the whole of mainland France
+    function fitFrance() {
+        map.invalidateSize();
+        map.fitBounds([[42.3, -4.8], [51.1, 8.3]], { padding: [10, 10] });
+    }
+    fitFrance();
+    window.addEventListener('load', fitFrance);
+    window.addEventListener('resize', fitFrance);
+    var offsets = { right: [8, 0], left: [-8, 0], top: [0, -8], bottom: [0, 8] };
+    pins.forEach(function (p) {
+        var m = L.circleMarker([p.lat, p.lon], {
+            radius: 7 + 2 * Math.sqrt(p.n), color: '#b60a11', weight: 2,
+            fillColor: '#b60a11', fillOpacity: 0.75
+        }).addTo(map);
+        m.bindTooltip(p.city, { permanent: true, direction: p.label, offset: offsets[p.label] || [8, 0],
+                                className: 'teams-map-label' });
+        m.on('click', function () {
+            var t = document.getElementById(p.id);
+            if (t) { t.scrollIntoView({ behavior: 'smooth' }); history.replaceState(null, '', '#' + p.id); }
+        });
+    });
+})();
+</script>
+
+{{ partial "footer_container.html" . }}
+{{ partial "footer.html" . }}

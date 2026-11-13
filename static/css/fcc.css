@@ -1238,3 +1238,72 @@ header h1 {
         font-size: 30px;
     }
 }
+
+/* Research Teams page: map of France and the teams grouped by city */
+.teams-map {
+    height: 560px;
+    max-width: 640px;
+    margin: 10px auto 30px auto;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    z-index: 0;
+}
+.teams-map-label {
+    font-family: 'Lato', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+}
+.leaflet-interactive {
+    cursor: pointer;
+}
+.team-city {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #ddd;
+}
+.team-city > h2 {
+    margin-top: 0;
+}
+.team-city > h2 .fa {
+    color: #b60a11;
+}
+.team-item {
+    margin: 22px 0;
+}
+.team-item h3 {
+    margin-bottom: 6px;
+}
+.team-item p {
+    margin: 0 0 4px 0;
+    font-size: 16px;
+    line-height: 1.5;
+}
+.team-pis {
+    font-weight: 700;
+}
+.team-lab {
+    color: #555;
+}
+.team-focus {
+    color: #777;
+    font-style: italic;
+}
+.teams-missing {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #ddd;
+}
+@media (max-width: 767px) {
+    .teams-map {
+        height: 400px;
+    }
+}
+.team-city > h2 small {
+    font-size: 55%;
+    color: #888;
+    margin-left: 6px;
+}
+.teams-map-label {
+    padding: 1px 6px;
+    cursor: pointer;
+}

@@ -18,6 +18,8 @@ news: ## Create a news item: make news NAME=2027-01-10-my-news
 	hugo new content post/$(NAME).md
 meeting: ## Create a meeting: make meeting NAME=2028-cerebellum-days
 	hugo new content meetings/$(NAME).md
+team: ## Add a research team: make team NAME=paris-isope-lab
+	hugo new content teams/$(NAME).md
 slide: ## Add a home page slider image: make slide NAME=purkinje-cell (picture goes in static/img/slider/)
 	hugo new content slider/$(NAME).md
 help: ## Show this help

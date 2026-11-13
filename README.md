@@ -17,6 +17,7 @@ The site is also rebuilt every Monday, so finished meetings move to "Past Meetin
 | **Latest News** (one file per news item) | `content/post/*.md` |
 | **Annual Meetings** intro text | `content/meetings/_index.md` |
 | **Annual Meetings** (one file per Cerebellum Days) | `content/meetings/*.md` |
+| **Research Teams** (one file per team; grouped by `city`) | `content/teams/*.md`, map positions of the cities in `data/cities.toml` |
 | **About the Club**: mission, board, mailing list | `content/about.md` |
 | Images | `static/img/` (`slider/` = home page slider, `board/`, `meetings/`, `news/`) |
 | Page templates / styles | `layouts/`, `static/css/fcc.css` |
@@ -44,6 +45,7 @@ Useful commands (`make help` lists them all):
 make update                               # get the latest version (site + theme)
 make news NAME=2027-01-10-my-news         # new news item (draft) in content/post/
 make meeting NAME=2028-cerebellum-days    # new meeting (draft) in content/meetings/
+make team NAME=lyon-new-team              # new research team (draft) in content/teams/
 make slide NAME=purkinje-cell             # new slider image (draft) in content/slider/; put the picture in static/img/slider/
 ```
 

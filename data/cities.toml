@@ -1,0 +1,43 @@
+# Map positions of the cities used in content/teams/*.md (field `city`).
+# A team whose city is missing here is still listed, but its city gets no pin on the map.
+# Coordinates: latitude, longitude (e.g. from the city's Wikipedia page).
+# label: where the city name sits next to its pin (right, left, top or bottom), to avoid overlaps.
+[Paris]
+  label = "top"
+  lat = 48.8566
+  lon = 2.3522
+
+[Paris-Saclay]
+  label = "bottom"
+  lat = 48.7100
+  lon = 2.1800
+
+[Strasbourg]
+  label = "top"
+  lat = 48.5734
+  lon = 7.7521
+
+[Montpellier]
+  label = "left"
+  lat = 43.6108
+  lon = 3.8767
+
+[Lyon]
+  label = "right"
+  lat = 45.7640
+  lon = 4.8357
+
+[Marseille]
+  label = "right"
+  lat = 43.2965
+  lon = 5.3698
+
+[Rouen]
+  label = "left"
+  lat = 49.4432
+  lon = 1.0999
+
+[Bordeaux]
+  label = "left"
+  lat = 44.8378
+  lon = -0.5792
