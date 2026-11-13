@@ -1230,3 +1230,11 @@ header h1 {
         font-size: 2em;
     }
 }
+
+/* Phones: home page section titles (Our Mission, Latest News, Mailing List)
+   at the same size as the section titles of the other pages (e.g. "Upcoming Meetings") */
+@media (max-width: 767px) {
+    .section-heading h1 {
+        font-size: 30px;
+    }
+}
