@@ -73,13 +73,12 @@ Sorbonne Université, CNRS UMR 8265, INSERM U1341
   name = "Delphine Burel"
   role = "Associated Board Member"
   affiliation = """
-Cancer and Brain Genomics, Inserm UMR1245
-UFR Santé
-Bâtiment Recherche 1er étage
+Cancer and Brain Genomics CBG, Inserm UMR U1245
+Université de Rouen Normandie
 22, boulevard Gambetta
 76000 Rouen
 """
-  photo = "delphine.jpeg"
+  photo = "delphine.png"
   email = "delphine.burel@univ-rouen.fr"
   link = "https://cbg.univ-rouen.fr/membre/delphine-burel/"
 
