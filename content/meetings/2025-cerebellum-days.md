@@ -8,5 +8,6 @@ keynotes = [
   "Christian Hansel (University of Chicago, USA)",
 ]
 picture = "meetings/2025-8cb-logo.jpg"
-external_link = "https://eighthcbdays.univ-rouen.fr/"
+program = "docs/meetings/2025-programme.pdf"
+#external_link = "https://eighthcbdays.univ-rouen.fr/"
 +++
