@@ -33,8 +33,10 @@
     <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:100,300,400,700|Merriweather:100,400,700|Roboto+Mono">
     <link rel="stylesheet" href="{{ .Site.BaseURL }}/css/hugo-academic-group.css">
 
+    {{- /* ?v=<checksum of the file>: browsers fetch the stylesheet again whenever it changes */ -}}
     {{ range .Site.Params.custom_css }}
-    <link rel="stylesheet" href="{{ $.Site.BaseURL }}/css/{{ . }}">
+    {{ $v := "" }}{{ $f := printf "static/css/%s" . }}{{ if fileExists $f }}{{ $v = readFile $f | md5 | truncate 8 "" }}{{ end }}
+    <link rel="stylesheet" href="{{ $.Site.BaseURL }}/css/{{ . }}{{ with $v }}?v={{ . }}{{ end }}">
     {{ end }}
 
 
