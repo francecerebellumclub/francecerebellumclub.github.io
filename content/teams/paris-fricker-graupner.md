@@ -5,5 +5,5 @@ lab = "Saints-Pères Paris Institute for the Neurosciences (SPPIN), CNRS UMR 800
 institutions = ["Université Paris Cité"]
 city = "Paris"
 link = "https://www.sppin.fr/the-teams/team-8-orientation-and-coordination/"
-focus = "How the brain orients and coordinates movement: cerebellar activity during motor learning of complex locomotor tasks, and vestibular and multisensory control of gaze and posture."
+focus = "How the brain orients and coordinates movement: cerebellar activity during motor learning of complex locomotor tasks."
 +++
