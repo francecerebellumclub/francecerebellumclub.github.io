@@ -1,6 +1,6 @@
 +++
 title = "Orientation and Coordination"
-pis = ["Desdemona Fricker", "Michael Graupner"]
+scientists = ["Michael Graupner"]
 lab = "Saints-Pères Paris Institute for the Neurosciences (SPPIN), CNRS UMR 8003"
 institutions = ["Université Paris Cité"]
 city = "Paris"

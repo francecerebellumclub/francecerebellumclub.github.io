@@ -1,6 +1,6 @@
 +++
 title = "Translational Research in Neurogenetic Diseases (NRGEN)"
-pis = ["Giovanni Stevanin", "Cyril Goizet"]
+scientists = ["Giovanni Stevanin", "Cyril Goizet"]
 lab = "Institut de Neurosciences Cognitives et Intégratives d'Aquitaine (INCIA), CNRS UMR 5287"
 institutions = ["Université de Bordeaux"]
 city = "Bordeaux"

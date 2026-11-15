@@ -13,4 +13,4 @@ missing_text = "Your team is missing or its details are out of date? Contact a [
 
 France is home to a rich and internationally renowned community of cerebellar research. Teams across the country study the cerebellum at every level, from molecules, synapses and circuits to development, behaviour, cognition and disease. They combine physiology, imaging, genetics, theory and clinical research.
 
-Click a city on the map to jump to its teams.
+Click a city on the map to jump to the teams its associated permanent cerebellar researchers.

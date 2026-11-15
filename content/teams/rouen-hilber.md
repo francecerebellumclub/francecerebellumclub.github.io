@@ -1,6 +1,6 @@
 +++
 title = "Genetics, Biology, and Plasticity of Brain Tumors"
-pis = ["Pascal Hilber"]
+scientists = ["Pascal Hilber"]
 lab = "Cancer and Brain Genomics (CBG), Inserm UMR 1245, Team 5"
 institutions = ["Université de Rouen Normandie"]
 city = "Rouen"

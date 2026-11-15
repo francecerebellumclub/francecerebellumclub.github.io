@@ -1,6 +1,6 @@
 +++
 title = ""            # team name
-pis = [""]            # principal investigator(s)
+scientists = [""]     # permanent cerebellar scientists: MCF, PU, CR or DR (Inserm, CNRS); not engineers, postdocs or emeriti
 lab = ""              # institute and unit, e.g. "Institut des Neurosciences de Montpellier (INM), Inserm U1298"
 institutions = [""]   # e.g. ["CNRS", "Université de Strasbourg"]
 city = ""             # used for grouping and the map; must exist in data/cities.toml

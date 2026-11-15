@@ -1,6 +1,6 @@
 +++
 title = "Physiology of Neural Networks"
-pis = ["Philippe Isope"]
+scientists = ["Frédéric Doussau", "Philippe Isope", "Antoine Valera"]
 lab = "Institut des Neurosciences Cellulaires et Intégratives (INCI), CNRS UPR 3212"
 institutions = ["Université de Strasbourg"]
 city = "Strasbourg"

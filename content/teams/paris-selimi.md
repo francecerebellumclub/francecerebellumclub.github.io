@@ -1,6 +1,6 @@
 +++
 title = "Molecular Identity and Diversity of Synapses in the Brain (MIDISYN)"
-pis = ["Fekrije Selimi"]
+scientists = ["Fekrije Selimi"]
 lab = "Center for Interdisciplinary Research in Biology (CIRB), CNRS UMR 7241, Inserm U1050"
 institutions = ["Collège de France", "Université PSL"]
 city = "Paris"

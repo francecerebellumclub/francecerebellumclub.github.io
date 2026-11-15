@@ -1,6 +1,6 @@
 +++
 title = "Cerebellum, Navigation and Memory (CeZaMe)"
-pis = ["Laure Rondi-Reig"]
+scientists = ["Julien Fournier", "Anne-Lise Paradis", "Christelle Rochefort", "Laure Rondi-Reig"]
 lab = "Neuroscience Paris Seine (NeuroSU), Institut de Biologie Paris-Seine (IBPS), CNRS UMR 8265, Inserm U1341"
 institutions = ["Sorbonne Université"]
 city = "Paris"

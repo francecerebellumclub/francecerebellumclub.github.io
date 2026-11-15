@@ -1,6 +1,6 @@
 +++
 title = "Astrocytes and Cognition"
-pis = ["Glenn Dallérac", "Micaela Galante"]
+scientists = ["Glenn Dallérac", "Micaela Galante","José-Manuel Cancela"]
 lab = "Institut des Neurosciences Paris-Saclay (NeuroPSI), CNRS UMR 9197"
 institutions = ["Université Paris-Saclay"]
 city = "Paris-Saclay"

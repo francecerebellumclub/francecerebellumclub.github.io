@@ -30,7 +30,7 @@
             {{ $t := . }}
             <div class="team-item">
                 <h3>{{ with $t.Params.link }}<a href="{{ . }}">{{ $t.Title }}</a>{{ else }}{{ $t.Title }}{{ end }}</h3>
-                {{ with $t.Params.pis }}<p class="team-pis"><i class="fa fa-user fa-fw" aria-hidden="true"></i> {{ delimit . ", " }}</p>{{ end }}
+                {{ with $t.Params.scientists }}<p class="team-scientists"><i class="fa fa-users fa-fw" aria-hidden="true"></i> {{ delimit . ", " }}</p>{{ end }}
                 <p class="team-lab"><i class="fa fa-university fa-fw" aria-hidden="true"></i> {{ $t.Params.lab }}{{ with $t.Params.institutions }}{{ if $t.Params.lab }}, {{ end }}{{ delimit . ", " }}{{ end }}</p>
                 {{ with .Params.focus }}<p class="team-focus">{{ . | markdownify }}</p>{{ end }}
             </div>

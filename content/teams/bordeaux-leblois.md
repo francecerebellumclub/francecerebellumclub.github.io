@@ -1,6 +1,6 @@
 +++
 title = "Network Dynamics for Procedural Learning"
-pis = ["Arthur Leblois"]
+scientists = ["Arthur Leblois"]
 lab = "Institut des Maladies Neurodégénératives (IMN), CNRS UMR 5293"
 institutions = ["Université de Bordeaux"]
 city = "Bordeaux"

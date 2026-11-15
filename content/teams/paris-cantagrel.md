@@ -1,6 +1,6 @@
 +++
 title = "Developmental Brain Disorders"
-pis = ["Vincent Cantagrel"]
+scientists = ["Vincent Cantagrel", "Marion Coolen"]
 lab = "Institut Imagine, Inserm UMR 1163"
 institutions = ["Université Paris Cité"]
 city = "Paris"

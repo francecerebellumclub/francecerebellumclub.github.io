@@ -1,6 +1,6 @@
 +++
 title = "Epigenetics and Pathophysiology of Neurodevelopmental Disorders"
-pis = ["Delphine Burel"]
+scientists = ["Delphine Burel"]
 lab = "Cancer and Brain Genomics (CBG), Inserm UMR 1245, Team 4"
 institutions = ["Université de Rouen Normandie"]
 city = "Rouen"

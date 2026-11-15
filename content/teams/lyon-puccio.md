@@ -1,6 +1,6 @@
 +++
 title = "Fundamental and Pathophysiological Mechanisms Implicated in Ataxia"
-pis = ["Hélène Puccio"]
+scientists = ["Sandrine Bretaud", "Hélène Puccio"]
 lab = "Institut NeuroMyoGène (INMG-PGNM), CNRS UMR 5261, Inserm U1315"
 institutions = ["Université Claude Bernard Lyon 1"]
 city = "Lyon"

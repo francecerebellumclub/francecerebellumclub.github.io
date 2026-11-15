@@ -1,6 +1,6 @@
 +++
 title = "Signaling in Development and Brain Tumours"
-pis = ["Olivier Ayrault"]
+scientists = ["Olivier Ayrault"]
 lab = "Institut Curie, CNRS UMR 3347, Inserm U1021"
 institutions = ["Université Paris-Saclay", "Université PSL"]
 city = "Paris-Saclay"

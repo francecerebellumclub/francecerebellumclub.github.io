@@ -1,6 +1,6 @@
 +++
 title = "Cerebellar Neurophysiology"
-pis = ["Céline Auger", "Brandon Stell"]
+scientists = ["Muriel Amar", "Céline Auger", "Thibault Collin", "Brandon Stell"]
 lab = "Saints-Pères Paris Institute for the Neurosciences (SPPIN), CNRS UMR 8003"
 institutions = ["Université Paris Cité"]
 city = "Paris"

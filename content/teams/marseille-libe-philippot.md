@@ -1,6 +1,6 @@
 +++
 title = "Human Neuronal Evolution"
-pis = ["Baptiste Libé-Philippot"]
+scientists = ["Baptiste Libé-Philippot"]
 lab = "Institut de Biologie du Développement de Marseille (IBDM), CNRS UMR 7288"
 institutions = ["Aix-Marseille Université"]
 city = "Marseille"

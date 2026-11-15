@@ -1,6 +1,6 @@
 +++
 title = "Motor Control and Cognition (Mococo)"
-pis = ["Sandra Chanraud", "Thomas Michelet"]
+scientists = ["Sandra Chanraud", "Thomas Michelet"]
 lab = "Institut de Neurosciences Cognitives et Intégratives d'Aquitaine (INCIA), CNRS UMR 5287"
 institutions = ["Université de Bordeaux", "EPHE-PSL"]
 city = "Bordeaux"

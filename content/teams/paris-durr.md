@@ -1,6 +1,6 @@
 +++
 title = "NeuroGen: Brain Development and Dysfunction in Neurogenetic Diseases"
-pis = ["Alexandra Durr", "Sandrine Humbert"]
+scientists = ["Alexis Brice", "Alexandra Durr", "Sandrine Humbert"]
 lab = "Paris Brain Institute (ICM), Inserm U1127, CNRS UMR 7225"
 institutions = ["Sorbonne Université", "AP-HP"]
 city = "Paris"

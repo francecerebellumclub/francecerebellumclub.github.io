@@ -1,6 +1,6 @@
 +++
 title = "Somatosensory-Cerebellar Circuit Development and Plasticity"
-pis = ["Fabrice Ango"]
+scientists = ["Fabrice Ango"]
 lab = "Institut des Neurosciences de Montpellier (INM), Inserm U1298"
 institutions = ["Université de Montpellier", "CNRS"]
 city = "Montpellier"

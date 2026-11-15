@@ -1,6 +1,6 @@
 +++
 title = "Ion Channels in Neuronal Excitability and Diseases"
-pis = ["Philippe Lory"]
+scientists = ["Philippe Lory", "Arnaud Monteil", "Sophie Nicole"]
 lab = "Institut de Génomique Fonctionnelle (IGF), CNRS UMR 5203, Inserm U1191"
 institutions = ["Université de Montpellier"]
 city = "Montpellier"

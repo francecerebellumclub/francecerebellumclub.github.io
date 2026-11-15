@@ -1,6 +1,6 @@
 +++
 title = "MOV'IT: Movement to Cognition, Insights into Motor Disorders"
-pis = ["Emmanuel Flamand-Roze", "Pierre Pouget"]
+scientists = ["Martina Bracco", "Emmanuel Flamand-Roze", "Cécile Gallea", "Pierre Pouget", "Marie Vidailhet"]
 lab = "Paris Brain Institute (ICM), Inserm U1127, CNRS UMR 7225"
 institutions = ["Sorbonne Université", "AP-HP"]
 city = "Paris"

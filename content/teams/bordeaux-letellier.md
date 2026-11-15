@@ -1,6 +1,6 @@
 +++
 title = "Mechanisms of Adaptive Processes in Brain Circuits (MAP)"
-pis = ["Mathieu Letellier"]
+scientists = ["Mathieu Letellier"]
 lab = "Interdisciplinary Institute for Neuroscience (IINS), CNRS UMR 5297"
 institutions = ["Université de Bordeaux"]
 city = "Bordeaux"

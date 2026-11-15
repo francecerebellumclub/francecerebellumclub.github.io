@@ -1,6 +1,6 @@
 +++
 title = "Neurophysiology of Brain Circuits"
-pis = ["Clément Léna", "Daniela Popa"]
+scientists = ["Clément Léna", "Daniela Popa"]
 lab = "Institut de Biologie de l'École Normale Supérieure (IBENS), CNRS UMR 8197, Inserm U1024"
 institutions = ["École Normale Supérieure", "Université PSL"]
 city = "Paris"
