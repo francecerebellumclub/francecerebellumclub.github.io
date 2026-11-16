@@ -20,7 +20,7 @@ disableKinds = ["taxonomy", "term"]
   author = "France Cerebellum Club"
   custom_css = ["fcc.css"]
   # Google Analytics: uncomment and set your measurement ID to enable it.
-  # gtm_id = "G-XXXXXXXXXX"
+  gtm_id = "G-YQQK5S60E0"
 
   # Club name shown below the image slider on the home page (slider images: content/slider/).
   slogan = "France Cerebellum Club"
