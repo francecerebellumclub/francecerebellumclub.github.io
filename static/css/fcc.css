@@ -1307,3 +1307,32 @@ header h1 {
     padding: 1px 6px;
     cursor: pointer;
 }
+
+/* Cookie consent banner for Google Analytics (layouts/partials/gtm.html) */
+.cookie-banner {
+  position: fixed;
+  left: 16px;
+  right: 16px;
+  bottom: 16px;
+  z-index: 2000;
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 16px 20px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.18);
+  font-size: 15px;
+  line-height: 1.5;
+}
+.cookie-banner p {
+  min-height: 0;
+  margin: 0 0 12px 0;
+}
+.cookie-banner .cookie-buttons {
+  text-align: right;
+}
+.cookie-banner .cookie-buttons .btn {
+  min-width: 100px;
+  margin-left: 8px;
+}

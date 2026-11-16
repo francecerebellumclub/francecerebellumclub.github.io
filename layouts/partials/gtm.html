@@ -1,8 +1,78 @@
-    <!-- Google tag (gtag.js), only included when params.gtm_id is set in config.toml -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id={{ .Site.Params.gtm_id }}"></script>
+    <!-- Google Analytics with a consent banner (only included when params.gtm_id is set in config.toml).
+         Analytics is loaded only after the visitor clicks "Accept". The choice is stored in the
+         visitor's browser for 13 months (CNIL rule); "Cookie settings" in the footer reopens the banner. -->
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', '{{ .Site.Params.gtm_id }}');
+    (function () {
+      var ID = '{{ .Site.Params.gtm_id }}', KEY = 'fcc-analytics-consent', MAX_AGE = 395 * 24 * 3600 * 1000;
+      var loaded = false;
+
+      function getChoice() {
+        try {
+          var c = JSON.parse(localStorage.getItem(KEY));
+          if (c && (Date.now() - c.t) < MAX_AGE) return c.v;
+        } catch (e) {}
+        return null;
+      }
+      function setChoice(v) {
+        try { localStorage.setItem(KEY, JSON.stringify({ v: v, t: Date.now() })); } catch (e) {}
+      }
+      function loadAnalytics() {
+        if (loaded) return;
+        loaded = true;
+        window.dataLayer = window.dataLayer || [];
+        window.gtag = function () { dataLayer.push(arguments); };
+        gtag('js', new Date());
+        gtag('config', ID);
+        var s = document.createElement('script');
+        s.async = true;
+        s.src = 'https://www.googletagmanager.com/gtag/js?id=' + ID;
+        document.head.appendChild(s);
+      }
+      function removeCookies() {
+        document.cookie.split(';').forEach(function (c) {
+          var name = c.split('=')[0].trim();
+          if (/^_ga/.test(name)) {
+            [location.hostname, '.' + location.hostname].forEach(function (d) {
+              document.cookie = name + '=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/; domain=' + d;
+            });
+            document.cookie = name + '=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/';
+          }
+        });
+      }
+      function showBanner() {
+        if (document.getElementById('cookie-banner')) return;
+        var b = document.createElement('div');
+        b.id = 'cookie-banner';
+        b.className = 'cookie-banner';
+        b.setAttribute('role', 'dialog');
+        b.setAttribute('aria-label', 'Cookie consent');
+        b.innerHTML =
+          '<p>With your consent, we use Google Analytics cookies to count visits and improve this website. ' +
+          'No data is used for advertising.</p>' +
+          '<div class="cookie-buttons">' +
+          '<button type="button" class="btn btn-default" data-choice="no">Decline</button>' +
+          '<button type="button" class="btn btn-primary" data-choice="yes">Accept</button>' +
+          '</div>';
+        b.addEventListener('click', function (e) {
+          var v = e.target.getAttribute('data-choice');
+          if (!v) return;
+          var before = getChoice();
+          setChoice(v);
+          b.parentNode.removeChild(b);
+          if (v === 'yes') loadAnalytics();
+          else if (before === 'yes') { removeCookies(); location.reload(); }
+        });
+        document.body.appendChild(b);
+      }
+
+      if (getChoice() === 'yes') loadAnalytics();
+      document.addEventListener('DOMContentLoaded', function () {
+        if (getChoice() === null) showBanner();
+        var link = document.getElementById('cookie-settings');
+        if (link) {
+          link.style.display = '';
+          link.addEventListener('click', function (e) { e.preventDefault(); showBanner(); });
+        }
+      });
+    })();
     </script>
