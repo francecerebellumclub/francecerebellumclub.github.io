@@ -7,5 +7,6 @@ keynotes = [
   "Kathleen J. Millen (Seattle Children's Research Institute, USA)",
   "Zhenyu Gao (Erasmus MC, Rotterdam, Netherlands)",
 ]
-picture = "meetings/2024-7cb-banner.jpg"
+picture = "meetings/2024-7cb-logo-square.jpg"
+program = "docs/meetings/2024-programme.pdf"
 +++
