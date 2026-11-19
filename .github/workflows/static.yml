@@ -45,7 +45,11 @@ jobs:
         env:
           HUGO_ENVIRONMENT: production
           TZ: Europe/Paris
-        run: hugo --gc --minify --baseURL "${{ steps.pages.outputs.base_url }}/"
+        # Always build with https://, even if "Enforce HTTPS" is off in the Pages settings
+        # (otherwise browsers block the http:// stylesheets and the site shows as plain text).
+        run: |
+          url="${{ steps.pages.outputs.base_url }}"
+          hugo --gc --minify --baseURL "https://${url#*://}/"
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
