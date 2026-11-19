@@ -12,17 +12,33 @@ The site is also rebuilt every Monday, so finished meetings move to "Past Meetin
 
 | What | File(s) |
 |------|---------|
-| Site title, club name under the slider, **home page mission synopsis**, menu | `config.toml` |
+| Site title, club name under the slider, **home page mission synopsis**, **home page mailing list** block, menu, copyright | `config.toml` |
 | **Home page image slider** (one file per image: `image`, `source`, `weight`) | `content/slider/*.md`, pictures in `static/img/slider/` |
-| **Latest News** (one file per news item) | `content/post/*.md` |
+| Slider order: random on every visit (`slider_shuffle = true`), or by `weight` (`false`) | `config.toml` |
+| **Latest News** (one file per news item) | `content/post/*.md`, banners in `static/img/news/` |
 | **Annual Meetings** intro text | `content/meetings/_index.md` |
-| **Annual Meetings** (one file per Cerebellum Days) | `content/meetings/*.md` |
+| **Annual Meetings** (one file per Cerebellum Days) | `content/meetings/*.md`, logos in `static/img/meetings/`, programme PDFs in `static/docs/meetings/` |
+| **Research Teams** intro text and the "your team is missing?" line | `content/teams/_index.md` |
 | **Research Teams** (one file per team; grouped by `city`) | `content/teams/*.md`, map positions of the cities in `data/cities.toml` |
-| **About the Club**: mission, board, mailing list | `content/about.md` |
-| Images | `static/img/` (`slider/` = home page slider, `board/`, `meetings/`, `news/`) |
+| **About the Club**: mission, board, former board members, international networks | `content/about.md`, board photos in `static/img/board/` |
+| Logo and browser icons | `static/img/logo.png`, `static/img/favicon.ico`, `favicon-32.png`, `apple-touch-icon.png` |
+| Google Analytics and cookie banner | `gtm_id` in `config.toml`, `layouts/partials/gtm.html` |
 | Page templates / styles | `layouts/`, `static/css/fcc.css` |
 
 Each Markdown file starts with a header between `+++` lines (title, date, ...), followed by the text.
+The templates created by the `make` commands below (`archetypes/`) explain every field.
+
+**Research Teams:** list only the team's *permanent* scientists working on the cerebellum:
+maître de conférences (MCF), professeur des universités (PU), chargé de recherche (CR) and
+directeur de recherche (DR) at Inserm or CNRS. Do not list engineers, postdocs, PhD students,
+emeriti or junior professors (CPJ). A new `city` also needs its coordinates in `data/cities.toml`
+to get a pin on the map.
+
+**Meeting programmes:** put the PDF in `static/docs/meetings/` and set
+`program = "docs/meetings/2028-programme.pdf"` in the meeting's file (a web address works too).
+
+**Google Analytics:** it loads only after a visitor accepts the cookie banner; "Cookie settings"
+in the footer reopens it. To turn Analytics and the banner off, comment out `gtm_id` in `config.toml`.
 
 ## Small edits (no installation needed)
 

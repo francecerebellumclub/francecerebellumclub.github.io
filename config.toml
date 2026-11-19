@@ -19,7 +19,9 @@ disableKinds = ["taxonomy", "term"]
   description = "Website of the France Cerebellum Club"
   author = "France Cerebellum Club"
   custom_css = ["fcc.css"]
-  # Google Analytics: uncomment and set your measurement ID to enable it.
+  # Google Analytics measurement ID. Analytics loads only after the visitor accepts the
+  # cookie banner (layouts/partials/gtm.html). Comment out this line to turn Analytics
+  # and the banner off.
   gtm_id = "G-YQQK5S60E0"
 
   # Club name shown below the image slider on the home page (slider images: content/slider/).
